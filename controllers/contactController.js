@@ -19,6 +19,7 @@ const getContactById = (req, res) => {
 // access public
 
 const createContact = (req, res) => {
+  console.log("Request body is", req.body);
   res.status(201).json({ message: "Contact Created Successfully" });
 };
 
