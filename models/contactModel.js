@@ -19,4 +19,4 @@ const contactSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.Schema("Contact", contactSchema);
+module.exports = mongoose.model("Contact", contactSchema);
