@@ -30,7 +30,13 @@ const createContact = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("All fields are mandotary");
   }
-  res.status(201).json({ message: "Contact Created Successfully" });
+
+  const contact = await Contact.create({
+    name,
+    email,
+    phone,
+  });
+  res.status(201).json(contact);
 });
 
 // @desc Update Contact
