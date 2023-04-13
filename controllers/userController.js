@@ -114,7 +114,8 @@ const loginUser = asyncHandler(async (req, res) => {
 // access private
 
 const currentUser = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: "fetched data successfully" });
+  // console.log(req, "current user");
+  res.status(200).json(req.user);
 });
 
 module.exports = {
